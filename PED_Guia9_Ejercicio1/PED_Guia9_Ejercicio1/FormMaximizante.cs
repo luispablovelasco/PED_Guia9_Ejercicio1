@@ -143,7 +143,7 @@ namespace PED_Guia9_Ejercicio1
         {
             for (int j = 1; j < botones.Length; j++)
             {
-                tb.Controls.Add(this.Arreglo[j]);
+                tb.Controls.Add(botones[j]);
             }
         }
 
