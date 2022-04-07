@@ -86,6 +86,7 @@ namespace PED_Guia9_Ejercicio1
                 tabPage1.Refresh(); //Refrescamos el tabpage
                 txtValor.Clear();
                 txtValor.Focus();
+                Ordenar();
 
             }
             catch { MessageBox.Show("Valor no valido"); }
