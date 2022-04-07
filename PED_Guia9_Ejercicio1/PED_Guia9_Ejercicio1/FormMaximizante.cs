@@ -99,7 +99,7 @@ namespace PED_Guia9_Ejercicio1
             ec = true; //Pasamos bandera a true
 
             int x = Arreglo.Length; //Tomamos la longitud del arreglo
-            for (int i = (x)/2; i > 0; i--) //Desde la mitad de la longitud incrementamos
+            for (int i = ((x)/2); i > 0; i--) //Desde la mitad de la longitud incrementamos
             {
                 Max_num(ArregloNumeros, x, i, ref Arreglo);
             }
@@ -157,8 +157,8 @@ namespace PED_Guia9_Ejercicio1
             for (int j = 1; j < Arreglo.Length; j++) //Para todos los elementos del arreglo 
             {
                 if (Arreglo[(2 * j)] != null) //Mientras el arreglo no esté vacio
-                    g.DrawLine(lapiz, Arreglo[j].Location.X, Arreglo[j].Location.Y + 20, Arreglo[(2 * j)].Location.X, Arreglo[(2 * j)].Location.Y);
-                if (Arreglo[(2 * j)] != null) //Mientras no haya solo un elemnto 
+                    g.DrawLine(lapiz, Arreglo[j].Location.X, Arreglo[j].Location.Y + 20, Arreglo[(2 * j)].Location.X + 20, Arreglo[(2 * j)].Location.Y);
+                if (Arreglo[(2 * j) + 1] != null) //Mientra no haya solo un elemento
                     g.DrawLine(lapiz, Arreglo[j].Location.X + 40, Arreglo[j].Location.Y + 20, Arreglo[(2 * j) + 1].Location.X + 20, Arreglo[(2 * j) + 1].Location.Y);
             }
         }
@@ -167,7 +167,7 @@ namespace PED_Guia9_Ejercicio1
         public void Max_num(int[] a, int x, int indice, ref Button[] botones)
         {
             int left = (indice) * 2;
-            int right = (indice) * 2 + 1;
+            int right = (indice * 2) + 1;
             int may = 0;
 
             if (left < x && a[left] > a[indice])
